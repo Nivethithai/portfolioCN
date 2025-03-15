@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor appointment website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <!--remicicon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!--header section starts-->
+<header class="header">
+    <a href="#" class="logo"><i class="fas fa-heartbeat"></i>medcare.</a>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#doctors">doctors</a>
+        <a href="#book">book</a>
+  
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+</header>
+
+<!--home section starts-->v
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="images.jpg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>stay safe, stay healthy</h3>
+        <p>Talk to our care expert today to book your consultation.</p>
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter location or use current location">
+            <button onclick="getLocation()">Use My Location</button>
+        </div>
+        <div id="doctor-list"></div>
+
+
+    
+    <div class="container">
+        <h1>Search for Hospitals & Doctors</h1>
+        <select id="doctor" name="doctor" required>
+            <option value="">Choose a specialization</option>
+            <option value="dr-smith">Dentist</option>
+            <option value="dr-john">Cardiology</option>
+            <option value="dr-jane">Dermatology  </option>
+            <option value="dr-jane">Neurology </option>
+            <option value="dr-jane">ENT specialists</option>
+            <option value="dr-jane"> Orthopedist,</option>
+            <option value="dr-jane">General physician</option>
+          </select>
+
+        <input type="text" id="searchInput" placeholder="Search by hospital, clinic, or doctor specialization">
+        <button onclick="search()">Search</button>
+
+
+        <div id="results"></div>
+    </div>
+        <a href="#" class="btn">contact us ><span class="fas-fa-hevrom-right"></span></a>
+    </div>
+</section>
+
+<!--icons section ends-->
+<section class="icons-container">
+    <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>140+</h3>
+        <p>doctors at work</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-user"></i>
+        <h3>1040+</h3>
+        <p>satisfied  patients</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>500+</h3>
+        <p>Bed facility</p>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-hospitals"></i>
+        <h3>80+</h3>
+        <p>available hospitals</p>
+    </div>
+</section>
+
+<!--services sectin starts-->
+<section class="services" id="servies">
+
+    <h1 class="heading">Our<span>servies</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>free checkup</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-ambulance"></i>
+            <h3>24/7 fa-ambulance</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>expert doctors</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>Medicines</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-procedures"></i>
+            <h3>bed facility</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Total care</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Total care</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+          <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+      </div>
+      <div class="box">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Total care</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        <a href="#" class="btn"> learn more <span class="fas-fa-chevron-right"></span></a>
+    </div>
+    </div>
+</section>
+
+<!--about section starts-->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span>us</h1>
+    <div class="row">
+
+        <div class="image">
+            <img src="images 2.jpg" alt="">
+            
+           <div class="content">
+            <h3>We take care of your healthy life</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem eius impedit deleniti dolores consequuntur harum autem molestiae tempora eveniet, natus, at sint. Sint repellendus nesciunt commodi aperiam ut culpa!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae molestiae neque quisquam esse tempore veritatis atque, magnam iste explicabo nesciunt?</p>
+            <a href="#" class="btn"><span class="fas fas-fa-chevron-right"></span>learn more</a>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Appointment Booking Section -->
+<section id="book" class="appointment">
+    <div class="container">
+      <h2>Book an Appointment</h2>
+      <form id="appointment-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="doctor">Select Doctor</label>
+          <select id="doctor" name="doctor" required>
+            <option value="">Choose a Doctor</option>
+            <option value="dr-smith">Dr. Smith</option>
+            <option value="dr-john">Dr. John</option>
+            <option value="dr-jane">Dr. Jane</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Appointment Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Appointment Time</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <p>&copy; 2023 Doctor Appointment System. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
